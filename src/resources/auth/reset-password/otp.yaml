@@ -1,0 +1,21 @@
+put:
+  summary: Resets a user's password
+  operationId: authResetUserPassword
+  description: Resets a user's password
+  tags:
+    - Auth
+  parameters:
+    - name: otp
+      in: path
+  requestBody:
+    schema:
+      email:
+        type: string
+        example: user@mail.com
+      password:
+        type: string
+        example: SuperSecretPassword!
+    required: true
+  responses:
+    "200":
+      description: Password reset successfully

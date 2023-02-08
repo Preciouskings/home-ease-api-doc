@@ -1,0 +1,23 @@
+post:
+  summary: Register a new user
+  operationId: authRegisterUserAccount
+  description: Register a new user account
+  tags:
+    - Auth
+  requestBody:
+    schema:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          example: user@mail.com
+        password:
+          type: string
+          example: SuperSecretPassword!
+    required: true
+  responses:
+    "201":
+      description: User account created

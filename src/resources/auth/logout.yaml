@@ -1,0 +1,9 @@
+post:
+  summary: Logout a user
+  operationId: authLogoutUserAccount
+  description: Logout a user account
+  tags:
+    - Auth
+  responses:
+    "200":
+      description: User logged out successfully

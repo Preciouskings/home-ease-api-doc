@@ -1,0 +1,19 @@
+post:
+  summary: Requests an OTP to reset a user's password
+  operationId: authRequestPasswordReset
+  description: Requests an OTP to reset a user's password
+  tags:
+    - Auth
+  requestBody:
+    schema:
+      type: object
+      required:
+        - email
+      properties:
+        email:
+          type: string
+          example: user@mail.com
+    required: true
+  responses:
+    "204":
+      description: If a user account with a matching email exists then they'll receive the OTP
