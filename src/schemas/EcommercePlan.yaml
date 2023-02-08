@@ -1,0 +1,13 @@
+type: object
+properties:
+  name:
+    type: string
+    example: 2-day plan
+  duration:
+    type: integer
+    description: the duration of the plan (in seconds)
+    example: 172800
+  amount:
+    type: integer
+    description: the cost of the plan (in kobo)
+    example: 500000

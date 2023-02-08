@@ -1,0 +1,21 @@
+get:
+  summary: Fetches the payment link for an ecommerce product
+  operationId: ecommerceProductFetchLink
+  description: Fetches the checkout link for `Ecommerce Product`
+  tags:
+    - Ecommerce
+  parameters:
+    - $ref: "../../parameters/path/ecommerceProductId.yaml"
+    - name: planId
+      in: query
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: Fetched ecommerce product link successfully
+      content:
+        application/json:
+          schema:
+            type: string
+            example: https://api.paystack.com/ref/to/tx

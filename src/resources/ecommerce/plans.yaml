@@ -1,0 +1,15 @@
+get:
+  summary: Fetches all ecommerce plans in the DB
+  operationId: ecommercePlansFetchAll
+  description: Fetches all `Ecommerce Plans`s in the DB
+  tags:
+    - Ecommerce
+  responses:
+    "200":
+      description: Fetched ecommerce plans successfully
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../schemas/EcommercePlan.yaml"
