@@ -1,0 +1,47 @@
+type: object
+required:
+  - name
+  - department
+  - level
+  - photo
+  - phoneNo
+  - likes
+  - dislikes
+  - gender
+  - nameOfLodge
+  - amount
+properties:
+  name:
+    type: string
+    example: John Doe
+  department:
+    type: string
+    example: ABE
+  level:
+    type: string
+    example: 200lvl
+  photo:
+    type: string
+    example: the actual photo file
+  phoneNo:
+    type: string
+    example: +2348012345678
+  likes:
+    type: array
+    items:
+      type: string
+      example: playing chess
+  dislikes:
+    type: array
+    items:
+      type: string
+      example: noisy environment
+  gender:
+    type: string
+    example: male
+  nameOfLodge:
+    type: string
+    example: Vital Lodge
+  amount:
+    type: integer
+    example: 100000

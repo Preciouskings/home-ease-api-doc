@@ -7,6 +7,11 @@ put:
   parameters:
     - name: otp
       in: path
+      description: The OTP received in user email
+      required: true
+      schema:
+        type: integer
+        example: 123456
   requestBody:
     schema:
       email:

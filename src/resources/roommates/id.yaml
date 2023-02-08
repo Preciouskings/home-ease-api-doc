@@ -1,0 +1,55 @@
+get:
+  summary: Fetches a rommate by ID
+  operationId: roommateFetchById
+  description: Fetches a `Rommate` by ID
+  tags:
+    - Roommate
+  parameters:
+    - name: roommateId
+      in: path
+      description: The ID of the rommate
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: Roommate fetched successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/Roommate.yaml"
+put:
+  summary: Updates a rommate by ID
+  operationId: roommateUpdateById
+  description: Updates a `Rommate` by ID
+  tags:
+    - Roommate
+  parameters:
+    - name: roommateId
+      in: path
+      description: The ID of the rommate
+      required: true
+      schema:
+        type: string
+  requestBody:
+    schema:
+      $ref: "../../schemas/RoommateOptional.yaml"
+  responses:
+    "204":
+      description: Roommate updated successfully
+delete:
+  summary: Deletes a `Roommate` by ID
+  operationId: roommateDeleteById
+  description: Deletes a rommate by ID
+  tags:
+    - Roommate
+  parameters:
+    - name: roommateId
+      in: path
+      description: The ID of the rommate
+      required: true
+      schema:
+        type: string
+  responses:
+    "410":
+      description: Roommate deleted successfully

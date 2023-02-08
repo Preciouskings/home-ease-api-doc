@@ -16,6 +16,11 @@ paths:
     $ref: "./resources/auth/reset-password/otp.yaml"
   /auth/logout:
     $ref: "./resources/auth/logout.yaml"
+
+  /roommates:
+    $ref: "./resources/roommates/index.yaml"
+  /roommates/{roommateId}:
+    $ref: "./resources/roommates/id.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"
