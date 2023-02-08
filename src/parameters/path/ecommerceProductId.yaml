@@ -1,0 +1,6 @@
+name: ecommerceProductId
+in: path
+description: The ID of the ecommerce product
+required: true
+schema:
+  type: string

@@ -1,0 +1,6 @@
+type: object
+properties:
+  questions:
+    type: string
+  answers:
+    type: string

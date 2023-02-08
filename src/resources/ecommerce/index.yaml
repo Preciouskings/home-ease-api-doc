@@ -1,0 +1,28 @@
+get:
+  summary: Fetches all ecommerce products in the DB
+  operationId: ecommerceProductsFetchAll
+  description: Fetches all `Ecommerce Product`s in the DB
+  tags:
+    - Ecommerce
+  responses:
+    "200":
+      description: Fetched ecommerce products successfully
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../schemas/EcommerceProduct.yaml"
+post:
+  summary: Creates a new ecommerce product
+  operationId: ecommerceProductCreate
+  description: Creates a new `Ecommerce Product`
+  tags:
+    - Ecommerce
+  responses:
+    "201":
+      description: Ecommerce product created successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/EcommerceProduct.yaml"

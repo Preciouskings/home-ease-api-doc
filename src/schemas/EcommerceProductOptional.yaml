@@ -1,0 +1,26 @@
+type: object
+properties:
+  owner:
+    type: string
+    example: John Doe
+  name:
+    type: string
+    example: some random product
+  description:
+    type: string
+    example: some random description
+  image:
+    type: string
+    description: the actual photo file
+  amount:
+    type: integer
+    example: 100000
+  quantity:
+    type: integer
+    example: 2
+  phoneNo:
+    type: string
+    example: +2348012345678
+  location:
+    type: string
+    example: location to pickup product

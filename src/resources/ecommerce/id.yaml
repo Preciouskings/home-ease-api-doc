@@ -1,0 +1,40 @@
+get:
+  summary: Fetches an ecommerce product by ID
+  operationId: ecommerceProductFetchById
+  description: Fetches an `Ecommerce Product` by ID
+  tags:
+    - Ecommerce
+  parameters:
+    - $ref: "../../parameters/path/ecommerceProductId.yaml"
+  responses:
+    "200":
+      description: Ecommerce product fetched successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/EcommerceProduct.yaml"
+put:
+  summary: Updates a ecommerce product by ID
+  operationId: ecommerceProductUpdateById
+  description: Updates an `Ecommerce Product` by ID
+  tags:
+    - Ecommerce
+  parameters:
+    - $ref: "../../parameters/path/ecommerceProductId.yaml"
+  requestBody:
+    schema:
+      $ref: "../../schemas/EcommerceProductOptional.yaml"
+  responses:
+    "204":
+      description: Ecommerce product updated successfully
+delete:
+  summary: Deletes an ecommerce product by ID
+  operationId: ecommerceProductDeleteById
+  description: Deletes an `Ecommerce Product` by ID
+  tags:
+    - Ecommerce
+  parameters:
+    - $ref: "../../parameters/path/ecommerceProductId.yaml"
+  responses:
+    "410":
+      description: Ecommerce product deleted successfully

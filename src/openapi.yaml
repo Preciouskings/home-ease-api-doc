@@ -18,9 +18,24 @@ paths:
     $ref: "./resources/auth/logout.yaml"
 
   /roommates:
-    $ref: "./resources/roommates/index.yaml"
+    $ref: "./resources/roommate/index.yaml"
   /roommates/{roommateId}:
-    $ref: "./resources/roommates/id.yaml"
+    $ref: "./resources/roommate/id.yaml"
+
+  /faqs:
+    $ref: "./resources/faq/index.yaml"
+  /faqs/{faqId}:
+    $ref: "./resources/faq/id.yaml"
+
+  /lodges:
+    $ref: "./resources/lodge/index.yaml"
+  /lodges/{lodgeId}:
+    $ref: "./resources/lodge/id.yaml"
+
+  /ecommerce:
+    $ref: "./resources/ecommerce/index.yaml"
+  /ecommerce/{lodgeId}:
+    $ref: "./resources/ecommerce/id.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"

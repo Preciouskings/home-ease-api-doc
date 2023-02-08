@@ -1,0 +1,9 @@
+type: object
+required:
+  - questions
+  - answers
+properties:
+  questions:
+    type: string
+  answers:
+    type: string

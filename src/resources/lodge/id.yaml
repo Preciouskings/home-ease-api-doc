@@ -1,0 +1,55 @@
+get:
+  summary: Fetches a lodge by ID
+  operationId: lodgeFetchById
+  description: Fetches a `Lodge` by ID
+  tags:
+    - Lodge
+  parameters:
+    - name: lodgeId
+      in: path
+      description: The ID of the lodge
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: Lodge fetched successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/Lodge.yaml"
+put:
+  summary: Updates a lodge by ID
+  operationId: lodgeUpdateById
+  description: Updates a `Lodge` by ID
+  tags:
+    - Lodge
+  parameters:
+    - name: lodgeId
+      in: path
+      description: The ID of the lodge
+      required: true
+      schema:
+        type: string
+  requestBody:
+    schema:
+      $ref: "../../schemas/LodgeOptional.yaml"
+  responses:
+    "204":
+      description: Lodge updated successfully
+delete:
+  summary: Deletes a lodge by ID
+  operationId: lodgeDeleteById
+  description: Deletes a `Lodge` by ID
+  tags:
+    - Lodge
+  parameters:
+    - name: lodgeId
+      in: path
+      description: The ID of the lodge
+      required: true
+      schema:
+        type: string
+  responses:
+    "410":
+      description: Lodge deleted successfully

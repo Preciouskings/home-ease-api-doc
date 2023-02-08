@@ -1,0 +1,28 @@
+get:
+  summary: Fetches all faqs in the DB
+  operationId: faqFetchAll
+  description: Fetches all `Faq`s in the DB
+  tags:
+    - Faq
+  responses:
+    "200":
+      description: Fetched faqs successfully
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../schemas/Faq.yaml"
+post:
+  summary: Creates a new faq
+  operationId: faqCreate
+  description: Creates a new `Faq`
+  tags:
+    - Faq
+  responses:
+    "201":
+      description: Faq created successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/Faq.yaml"

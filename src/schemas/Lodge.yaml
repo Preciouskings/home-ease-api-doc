@@ -1,0 +1,39 @@
+type: object
+required:
+  - name
+  - amount
+  - location
+  - images
+  - caretaker
+  - caretakerNo
+  - light
+  - water
+  - tpToSchool
+properties:
+  name:
+    type: string
+    example: Vital Lodge
+  amount:
+    type: integer
+    example: 100000
+  location:
+    type: string
+    example: Ihiagwa
+  images:
+    type: array
+    items:
+      schema:
+        type: string
+        description: the actual photo file
+  caretaker:
+    type: string
+    example: John Doe
+  light:
+    type: integer
+    description: average number of hours of power supply per day
+  water:
+    type: boolean
+    example: true
+  tpToSchool:
+    type: integer
+    example: 100

@@ -1,0 +1,55 @@
+get:
+  summary: Fetches a faq by ID
+  operationId: faqFetchById
+  description: Fetches a `Faq` by ID
+  tags:
+    - Faq
+  parameters:
+    - name: faqId
+      in: path
+      description: The ID of the faq
+      required: true
+      schema:
+        type: string
+  responses:
+    "200":
+      description: Faq fetched successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/Faq.yaml"
+put:
+  summary: Updates a faq by ID
+  operationId: faqUpdateById
+  description: Updates a `Faq` by ID
+  tags:
+    - Faq
+  parameters:
+    - name: faqId
+      in: path
+      description: The ID of the faq
+      required: true
+      schema:
+        type: string
+  requestBody:
+    schema:
+      $ref: "../../schemas/FaqOptional.yaml"
+  responses:
+    "204":
+      description: Faq updated successfully
+delete:
+  summary: Deletes a faq by ID
+  operationId: faqDeleteById
+  description: Deletes a faq by ID
+  tags:
+    - Faq
+  parameters:
+    - name: faqId
+      in: path
+      description: The ID of the faq
+      required: true
+      schema:
+        type: string
+  responses:
+    "410":
+      description: Faq deleted successfully

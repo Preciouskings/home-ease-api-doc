@@ -1,13 +1,13 @@
 get:
-  summary: Fetches a rommate by ID
+  summary: Fetches a roommate by ID
   operationId: roommateFetchById
-  description: Fetches a `Rommate` by ID
+  description: Fetches a `Roommate` by ID
   tags:
     - Roommate
   parameters:
     - name: roommateId
       in: path
-      description: The ID of the rommate
+      description: The ID of the roommate
       required: true
       schema:
         type: string
@@ -19,15 +19,15 @@ get:
           schema:
             $ref: "../../schemas/Roommate.yaml"
 put:
-  summary: Updates a rommate by ID
+  summary: Updates a roommate by ID
   operationId: roommateUpdateById
-  description: Updates a `Rommate` by ID
+  description: Updates a `Roommate` by ID
   tags:
     - Roommate
   parameters:
     - name: roommateId
       in: path
-      description: The ID of the rommate
+      description: The ID of the roommate
       required: true
       schema:
         type: string
@@ -38,15 +38,15 @@ put:
     "204":
       description: Roommate updated successfully
 delete:
-  summary: Deletes a `Roommate` by ID
+  summary: Deletes a roommate by ID
   operationId: roommateDeleteById
-  description: Deletes a rommate by ID
+  description: Deletes a `Roommate` by ID
   tags:
     - Roommate
   parameters:
     - name: roommateId
       in: path
-      description: The ID of the rommate
+      description: The ID of the roommate
       required: true
       schema:
         type: string

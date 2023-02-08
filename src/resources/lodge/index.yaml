@@ -1,0 +1,28 @@
+get:
+  summary: Fetches all lodges in the DB
+  operationId: lodgeFetchAll
+  description: Fetches all `Lodge`s in the DB
+  tags:
+    - Lodge
+  responses:
+    "200":
+      description: Fetched lodges successfully
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../../schemas/Lodge.yaml"
+post:
+  summary: Creates a new lodge
+  operationId: lodgeCreate
+  description: Creates a new `Lodge`
+  tags:
+    - Lodge
+  responses:
+    "201":
+      description: Lodge created successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/Lodge.yaml"
