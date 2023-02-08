@@ -1,23 +1,19 @@
 openapi: "3.0.0"
 info:
+  title: Home Ease API
+  description: This is the official documentation for the Home Ease backend
   version: 1.0.0
-  title: Swagger Petstore
-  description: Multi-file boilerplate for OpenAPI Specification.
-  license:
-    name: MIT
-  contact:
-    name: API Support
-    url: http://www.example.com/support
-    email: support@example.com
 servers:
-  - url: http://petstore.swagger.io/v1
-tags:
-  - name: pets
+  - url: https://home-ease.onrender.com
 paths:
-  /pets:
-    $ref: "./resources/pets.yaml"
-  /pets/{petId}:
-    $ref: "./resources/pet.yaml"
+  /auth/login:
+    $ref: "./resources/auth/login.yaml"
+  /auth/register:
+    $ref: "./resources/auth/register.yaml"
+  /auth/reset-password:
+    $ref: "./resources/auth/reset-password.yaml"
+  /auth/logout:
+    $ref: "./resources/auth/logout.yaml"
 components:
   parameters:
     $ref: "./parameters/_index.yaml"
