@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with: 
           name: github-pages
-          path: ./_build
+          path: /_build
 
   deploy:
     needs: build
