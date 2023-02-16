@@ -25,7 +25,7 @@ properties:
     example: the actual photo file
   phoneNo:
     type: string
-    example: +2348012345678
+    example: "+2348012345678"
   likes:
     type: array
     items:
