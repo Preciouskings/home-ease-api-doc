@@ -1,0 +1,5 @@
+- $ref: "./Auth.yaml"
+- $ref: "./Ecommerce.yaml"
+- $ref: "./Faq.yaml"
+- $ref: "./Lodge.yaml"
+- $ref: "./Roommate.yaml"
