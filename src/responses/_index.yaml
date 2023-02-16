@@ -1,2 +1,2 @@
-UnauthorizedError:
+Unauthorized:
   $ref: "./UnauthorizedError.yaml"

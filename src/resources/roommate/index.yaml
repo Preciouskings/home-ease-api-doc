@@ -34,3 +34,5 @@ post:
         application/json:
           schema:
             $ref: "../../schemas/Roommate.yaml"
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

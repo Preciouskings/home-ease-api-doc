@@ -43,6 +43,8 @@ put:
   responses:
     "204":
       description: Lodge updated successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
 delete:
   security:
     - BearerAuth: []
@@ -61,3 +63,5 @@ delete:
   responses:
     "410":
       description: Lodge deleted successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

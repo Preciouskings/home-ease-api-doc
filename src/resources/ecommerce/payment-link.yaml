@@ -21,3 +21,5 @@ get:
           schema:
             type: string
             example: https://api.paystack.com/ref/to/tx
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

@@ -32,6 +32,8 @@ put:
   responses:
     "204":
       description: Ecommerce product updated successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
 delete:
   security:
     - BearerAuth: []
@@ -45,3 +47,5 @@ delete:
   responses:
     "410":
       description: Ecommerce product deleted successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

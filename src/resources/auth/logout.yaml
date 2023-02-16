@@ -9,3 +9,5 @@ post:
   responses:
     "200":
       description: User logged out successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

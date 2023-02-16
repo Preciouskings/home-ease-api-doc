@@ -34,3 +34,5 @@ post:
         application/json:
           schema:
             $ref: "../../schemas/EcommerceProduct.yaml"
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

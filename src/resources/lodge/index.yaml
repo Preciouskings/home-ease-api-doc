@@ -34,3 +34,5 @@ post:
         application/json:
           schema:
             $ref: "../../schemas/Lodge.yaml"
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
