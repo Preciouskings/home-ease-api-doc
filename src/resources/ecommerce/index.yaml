@@ -14,11 +14,19 @@ get:
             items:
               $ref: "../../schemas/EcommerceProduct.yaml"
 post:
+  security:
+    - BearerAuth: []
   summary: Creates a new ecommerce product
   operationId: ecommerceProductCreate
   description: Creates a new `Ecommerce Product`
   tags:
     - Ecommerce
+  requestBody:
+    description: "`Ecommerce Product` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/EcommerceProduct.yaml"
   responses:
     "201":
       description: Ecommerce product created successfully
@@ -26,3 +34,5 @@ post:
         application/json:
           schema:
             $ref: "../../schemas/EcommerceProduct.yaml"
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

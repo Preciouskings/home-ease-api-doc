@@ -14,11 +14,19 @@ get:
             items:
               $ref: "../../schemas/Faq.yaml"
 post:
+  security:
+    - BearerAuth: []
   summary: Creates a new faq
   operationId: faqCreate
   description: Creates a new `Faq`
   tags:
     - Faq
+  requestBody:
+    description: "`Faq` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Faq.yaml"
   responses:
     "201":
       description: Faq created successfully
@@ -26,3 +34,5 @@ post:
         application/json:
           schema:
             $ref: "../../schemas/Faq.yaml"
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

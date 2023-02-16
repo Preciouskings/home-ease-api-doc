@@ -5,19 +5,12 @@ post:
   tags:
     - Auth
   requestBody:
-    schema:
-      type: object
-      required:
-        - email
-        - password
-      properties:
-        email:
-          type: string
-          example: user@mail.com
-        password:
-          type: string
-          example: SuperSecretPassword!
+    description: Register credentials
     required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/User.yaml"
   responses:
     "201":
       description: User account created

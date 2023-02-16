@@ -19,6 +19,8 @@ get:
           schema:
             $ref: "../../schemas/Lodge.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a lodge by ID
   operationId: lodgeUpdateById
   description: Updates a `Lodge` by ID
@@ -32,12 +34,20 @@ put:
       schema:
         type: string
   requestBody:
-    schema:
-      $ref: "../../schemas/LodgeOptional.yaml"
+    description: "`Lodge` details"
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/LodgeOptional.yaml"
   responses:
     "204":
       description: Lodge updated successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes a lodge by ID
   operationId: lodgeDeleteById
   description: Deletes a `Lodge` by ID
@@ -53,3 +63,5 @@ delete:
   responses:
     "410":
       description: Lodge deleted successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

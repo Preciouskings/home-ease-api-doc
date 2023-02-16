@@ -1,4 +1,6 @@
 get:
+  security:
+    - BearerAuth: []
   summary: Fetches the payment link for an ecommerce product
   operationId: ecommerceProductFetchLink
   description: Fetches the checkout link for `Ecommerce Product`
@@ -19,3 +21,5 @@ get:
           schema:
             type: string
             example: https://api.paystack.com/ref/to/tx
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

@@ -1,4 +1,6 @@
 post:
+  security:
+    - BearerAuth: []
   summary: Logout a user
   operationId: authLogoutUserAccount
   description: Logout a user account
@@ -7,3 +9,5 @@ post:
   responses:
     "200":
       description: User logged out successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

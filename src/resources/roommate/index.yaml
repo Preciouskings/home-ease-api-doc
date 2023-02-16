@@ -1,28 +1,38 @@
 get:
-  summary: Fetches all faqs in the DB
+  summary: Fetches all Roommates in the DB
   operationId: rommmateFetchAll
-  description: Fetches all `Faq`s in the DB
+  description: Fetches all `Roommate`s in the DB
   tags:
-    - Faq
+    - Roommate
   responses:
     "200":
-      description: Fetched faqs successfully
+      description: Fetched Roommates successfully
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: "../../schemas/Faq.yaml"
+              $ref: "../../schemas/Roommate.yaml"
 post:
-  summary: Creates a new faq
-  operationId: faqCreate
-  description: Creates a new `Faq`
+  security:
+    - BearerAuth: []
+  summary: Creates a new Roommate
+  operationId: RoommateCreate
+  description: Creates a new `Roommate`
   tags:
-    - Faq
+    - Roommate
+  requestBody:
+    description: "`Roommate` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Roommate.yaml"
   responses:
     "201":
-      description: Faq created successfully
+      description: Roommate created successfully
       content:
         application/json:
           schema:
-            $ref: "../../schemas/Faq.yaml"
+            $ref: "../../schemas/Roommate.yaml"
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

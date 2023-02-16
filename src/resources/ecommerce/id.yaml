@@ -14,6 +14,8 @@ get:
           schema:
             $ref: "../../schemas/EcommerceProduct.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a ecommerce product by ID
   operationId: ecommerceProductUpdateById
   description: Updates an `Ecommerce Product` by ID
@@ -22,12 +24,19 @@ put:
   parameters:
     - $ref: "../../parameters/path/ecommerceProductId.yaml"
   requestBody:
-    schema:
-      $ref: "../../schemas/EcommerceProductOptional.yaml"
+    description: "`Ecommerce Product` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/EcommerceProductOptional.yaml"
   responses:
     "204":
       description: Ecommerce product updated successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes an ecommerce product by ID
   operationId: ecommerceProductDeleteById
   description: Deletes an `Ecommerce Product` by ID
@@ -38,3 +47,5 @@ delete:
   responses:
     "410":
       description: Ecommerce product deleted successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

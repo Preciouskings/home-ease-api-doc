@@ -19,6 +19,8 @@ get:
           schema:
             $ref: "../../schemas/Roommate.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a roommate by ID
   operationId: roommateUpdateById
   description: Updates a `Roommate` by ID
@@ -32,12 +34,20 @@ put:
       schema:
         type: string
   requestBody:
-    schema:
-      $ref: "../../schemas/RoommateOptional.yaml"
+    description: "`Roommate` details"
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/RoommateOptional.yaml"
   responses:
     "204":
       description: Roommate updated successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes a roommate by ID
   operationId: roommateDeleteById
   description: Deletes a `Roommate` by ID
@@ -53,3 +63,5 @@ delete:
   responses:
     "410":
       description: Roommate deleted successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

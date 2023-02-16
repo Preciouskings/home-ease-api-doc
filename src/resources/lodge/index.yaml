@@ -14,11 +14,19 @@ get:
             items:
               $ref: "../../schemas/Lodge.yaml"
 post:
+  security:
+    - BearerAuth: []
   summary: Creates a new lodge
   operationId: lodgeCreate
   description: Creates a new `Lodge`
   tags:
     - Lodge
+  requestBody:
+    description: "`Lodge` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Lodge.yaml"
   responses:
     "201":
       description: Lodge created successfully
@@ -26,3 +34,5 @@ post:
         application/json:
           schema:
             $ref: "../../schemas/Lodge.yaml"
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"

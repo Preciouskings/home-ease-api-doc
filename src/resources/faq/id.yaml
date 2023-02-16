@@ -19,6 +19,8 @@ get:
           schema:
             $ref: "../../schemas/Faq.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a faq by ID
   operationId: faqUpdateById
   description: Updates a `Faq` by ID
@@ -32,12 +34,20 @@ put:
       schema:
         type: string
   requestBody:
-    schema:
-      $ref: "../../schemas/FaqOptional.yaml"
+    description: "`Faq` details"
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/FaqOptional.yaml"
   responses:
     "204":
       description: Faq updated successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes a faq by ID
   operationId: faqDeleteById
   description: Deletes a faq by ID
@@ -53,3 +63,5 @@ delete:
   responses:
     "410":
       description: Faq deleted successfully
+    "401":
+      $ref: "../../responses/UnauthorizedError.yaml"
