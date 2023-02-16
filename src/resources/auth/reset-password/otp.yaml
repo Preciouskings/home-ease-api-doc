@@ -18,12 +18,7 @@ put:
     content:
       application/json:
         schema:
-          email:
-            type: string
-            example: user@mail.com
-          password:
-            type: string
-            example: SuperSecretPassword!
+          $ref: "../../../schemas/User.yaml"
   responses:
     "200":
       description: Password reset successfully
