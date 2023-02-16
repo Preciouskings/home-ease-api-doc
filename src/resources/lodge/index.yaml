@@ -21,6 +21,12 @@ post:
   description: Creates a new `Lodge`
   tags:
     - Lodge
+  requestBody:
+    description: "`Lodge` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Lodge.yaml"
   responses:
     "201":
       description: Lodge created successfully

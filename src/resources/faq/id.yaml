@@ -34,8 +34,12 @@ put:
       schema:
         type: string
   requestBody:
-    schema:
-      $ref: "../../schemas/FaqOptional.yaml"
+    description: "`Faq` details"
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/FaqOptional.yaml"
   responses:
     "204":
       description: Faq updated successfully

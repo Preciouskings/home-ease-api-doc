@@ -21,6 +21,12 @@ post:
   description: Creates a new `Faq`
   tags:
     - Faq
+  requestBody:
+    description: "`Faq` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Faq.yaml"
   responses:
     "201":
       description: Faq created successfully

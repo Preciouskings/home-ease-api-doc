@@ -34,8 +34,12 @@ put:
       schema:
         type: string
   requestBody:
-    schema:
-      $ref: "../../schemas/LodgeOptional.yaml"
+    description: "`Lodge` details"
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/LodgeOptional.yaml"
   responses:
     "204":
       description: Lodge updated successfully
