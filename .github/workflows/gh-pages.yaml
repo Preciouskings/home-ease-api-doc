@@ -2,9 +2,9 @@ name: Publish OpenAPI documentation to GitHub Pages
 
 on:
   push:
-    branches: [main, feat/github-workflow]
+    branches: [main]
   workflow_dispatch:
-    branches: [main, feat/github-workflow]
+    branches: [main]
 
 jobs:
   build:
