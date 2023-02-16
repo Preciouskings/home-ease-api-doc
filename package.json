@@ -4,7 +4,7 @@
   "description": "Multi-file boilerplate for Open API Specification.",
   "main": "index.js",
   "scripts": {
-    "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi.yaml --type yaml",
+    "build:openapi": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi.yaml --type yaml",
     "build:html": "pnpm build && redoc-cli bundle _build/openapi.yaml  --output _build/index.html --options.onlyRequiredInSamples",
     "preview": "pnpm build && redoc-cli serve _build/openapi.yaml --options.onlyRequiredInSamples",
     "deploy": "bash ./ci/deploy.sh",
