@@ -19,6 +19,8 @@ get:
           schema:
             $ref: "../../schemas/Faq.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a faq by ID
   operationId: faqUpdateById
   description: Updates a `Faq` by ID
@@ -38,6 +40,8 @@ put:
     "204":
       description: Faq updated successfully
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes a faq by ID
   operationId: faqDeleteById
   description: Deletes a faq by ID

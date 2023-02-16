@@ -19,6 +19,8 @@ get:
           schema:
             $ref: "../../schemas/Roommate.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a roommate by ID
   operationId: roommateUpdateById
   description: Updates a `Roommate` by ID
@@ -38,6 +40,8 @@ put:
     "204":
       description: Roommate updated successfully
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes a roommate by ID
   operationId: roommateDeleteById
   description: Deletes a `Roommate` by ID

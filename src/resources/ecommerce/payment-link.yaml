@@ -1,4 +1,6 @@
 get:
+  security:
+    - BearerAuth: []
   summary: Fetches the payment link for an ecommerce product
   operationId: ecommerceProductFetchLink
   description: Fetches the checkout link for `Ecommerce Product`

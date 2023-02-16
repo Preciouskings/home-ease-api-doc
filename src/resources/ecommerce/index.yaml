@@ -14,6 +14,8 @@ get:
             items:
               $ref: "../../schemas/EcommerceProduct.yaml"
 post:
+  security:
+    - BearerAuth: []
   summary: Creates a new ecommerce product
   operationId: ecommerceProductCreate
   description: Creates a new `Ecommerce Product`

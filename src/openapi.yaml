@@ -45,5 +45,7 @@ components:
     $ref: "./parameters/_index.yaml"
   schemas:
     $ref: "./schemas/_index.yaml"
+  securitySchemes:
+    $ref: "./schemas/security/_index.yaml"
   responses:
     $ref: "./responses/_index.yaml"

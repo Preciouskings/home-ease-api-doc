@@ -14,6 +14,8 @@ get:
           schema:
             $ref: "../../schemas/EcommerceProduct.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a ecommerce product by ID
   operationId: ecommerceProductUpdateById
   description: Updates an `Ecommerce Product` by ID
@@ -28,6 +30,8 @@ put:
     "204":
       description: Ecommerce product updated successfully
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes an ecommerce product by ID
   operationId: ecommerceProductDeleteById
   description: Deletes an `Ecommerce Product` by ID

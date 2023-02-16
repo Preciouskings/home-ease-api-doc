@@ -1,4 +1,6 @@
 post:
+  security:
+    - BearerAuth: []
   summary: Logout a user
   operationId: authLogoutUserAccount
   description: Logout a user account

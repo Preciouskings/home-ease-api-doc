@@ -19,6 +19,8 @@ get:
           schema:
             $ref: "../../schemas/Lodge.yaml"
 put:
+  security:
+    - BearerAuth: []
   summary: Updates a lodge by ID
   operationId: lodgeUpdateById
   description: Updates a `Lodge` by ID
@@ -38,6 +40,8 @@ put:
     "204":
       description: Lodge updated successfully
 delete:
+  security:
+    - BearerAuth: []
   summary: Deletes a lodge by ID
   operationId: lodgeDeleteById
   description: Deletes a `Lodge` by ID
