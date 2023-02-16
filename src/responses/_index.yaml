@@ -1,4 +1,2 @@
-UnexpectedError:
-  $ref: "./UnexpectedError.yaml"
-NullResponse:
-  $ref: "./NullResponse.yaml"
+UnauthorizedError:
+  $ref: "./UnauthorizedError.yaml"
