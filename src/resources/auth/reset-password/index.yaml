@@ -5,15 +5,18 @@ post:
   tags:
     - Auth
   requestBody:
-    schema:
-      type: object
-      required:
-        - email
-      properties:
-        email:
-          type: string
-          example: user@mail.com
+    description: "New password"
     required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - email
+          properties:
+            email:
+              type: string
+              example: user@mail.com
   responses:
     "204":
       description: If a user account with a matching email exists then they'll receive the OTP

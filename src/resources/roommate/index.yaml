@@ -21,6 +21,12 @@ post:
   description: Creates a new `Roommate`
   tags:
     - Roommate
+  requestBody:
+    description: "`Roommate` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/Roommate.yaml"
   responses:
     "201":
       description: Roommate created successfully

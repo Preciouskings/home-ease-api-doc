@@ -13,14 +13,17 @@ put:
         type: integer
         example: 123456
   requestBody:
-    schema:
-      email:
-        type: string
-        example: user@mail.com
-      password:
-        type: string
-        example: SuperSecretPassword!
+    description: "New password"
     required: true
+    content:
+      application/json:
+        schema:
+          email:
+            type: string
+            example: user@mail.com
+          password:
+            type: string
+            example: SuperSecretPassword!
   responses:
     "200":
       description: Password reset successfully

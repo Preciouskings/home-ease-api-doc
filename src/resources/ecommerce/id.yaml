@@ -24,8 +24,11 @@ put:
   parameters:
     - $ref: "../../parameters/path/ecommerceProductId.yaml"
   requestBody:
-    schema:
-      $ref: "../../schemas/EcommerceProductOptional.yaml"
+    description: "`Ecommerce Product` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/EcommerceProductOptional.yaml"
   responses:
     "204":
       description: Ecommerce product updated successfully

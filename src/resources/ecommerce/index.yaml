@@ -21,6 +21,12 @@ post:
   description: Creates a new `Ecommerce Product`
   tags:
     - Ecommerce
+  requestBody:
+    description: "`Ecommerce Product` details"
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/EcommerceProduct.yaml"
   responses:
     "201":
       description: Ecommerce product created successfully

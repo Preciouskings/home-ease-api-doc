@@ -29,7 +29,7 @@ properties:
     example: 2
   phoneNo:
     type: string
-    example: +2348012345678
+    example: "+2348012345678"
   location:
     type: string
     example: location to pickup product
