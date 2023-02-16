@@ -1,4 +1,14 @@
-Pet:
-  $ref: "./Pet.yaml"
+EcommercePlan:
+  $ref: "./EcommercePlan.yaml"
+EcommerceProduct:
+  $ref: "./EcommerceProduct.yaml"
+Faq:
+  $ref: "./Faq.yaml"
+Lodge:
+  $ref: "./Lodge.yaml"
+Roommate:
+  $ref: "./Roommate.yaml"
+User:
+  $ref: "./User.yaml"
 Error:
   $ref: "./Error.yaml"
