@@ -12,9 +12,8 @@ properties:
   images:
     type: array
     items:
-      schema:
-        type: string
-        description: the actual photo file
+      type: string
+      description: the actual photo file
   caretaker:
     type: string
     example: John Doe
