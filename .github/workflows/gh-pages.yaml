@@ -27,7 +27,7 @@ jobs:
           pnpm build:html
       
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact
         with: 
           name: github-pages
           path: ./_build
