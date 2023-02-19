@@ -25,11 +25,10 @@ jobs:
         run: |
           pnpm build:openapi
           pnpm build:html
-      
+
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with: 
-          name: github-pages
+        uses: actions/upload-pages-artifact@v1
+        with:
           path: ./_build
 
   deploy:
